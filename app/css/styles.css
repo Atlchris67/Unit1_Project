@@ -1,117 +1,115 @@
-@import url('http://necolas.github.io/normalize.css/3.0.2/normalize.css');
+/** 
+ * Treehouse FSJS Techdegree
+ * Random Quote Generator - CSS
+ */
 
-/*General*/
 body {
-  background: #fff;
-  max-width: 980px;
-  margin: 0 auto;
-  padding: 0 20px;
-  font: Helvetica Neue, Helvectica, Arial, serif;
-  font-weight: 300;
-  font-size: 1em;
-  line-height: 1.5em;
-  color: #8d9aa5;
+  background-color: #36b55c;
+  color: white;
+  font-family: 'Playfair Display', serif;
 }
 
-a {
-  color: #3f8aBf;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #3079ab;
-}
-
-a:visited {
-  color: #5a6772;
-}
-
-h1, h2, h3 {
-  font-weight: 500;
-  color: #384047;
-}
-
-h1 {
-  font-size: 1.8em;
-  margin: 60px 0 40px;
-}
-
-h2 {
-    font-size: 1em;
-    font-weight: 300;
-    margin: 0;
-    padding: 30px 0 10px 0;
-}
-
-#home h2 {
-  margin: -40px 0 0;
-}
-
-h3 {
-  font-size: .9em;
-  font-weight: 300;
-  margin: 0;
-  padding: 0;
-}
-
-h3 em {
-  font-style: normal;
-  font-weight: 300;
-  margin: 0 0 10px 5px;
-  padding: 0;
-  color: #8d9aa5;
-}
-
-ol {
-  margin: 0 0 20px 32px;
-  padding: 0;
-}
-
-#home ol {
-  list-style-type: none;
-  margin: 0 0 40px 0;
-}
-
-li {
-  padding: 8px 0;
-  display: list-item;
-  width: 100%;
-  margin: 0;
-  counter-increment: step-counter;
-}
-
-#home li::before {
-    content: counter(step-counter);
-    font-size: .65em;
-    color: #fff;
-    font-weight: 300;
-    padding: 2px 6px;
-    margin:  0 18px 0 0;
-    border-radius: 3px;
-    background:#8d9aa5;
-    line-height: 1em;
-}
-
-.lens {
-  display: inline-block;
-  width: 0;
-  height: 0;
-  border-top: 8px solid transparent;
-  border-bottom: 8px solid transparent;
-  border-right: 8px solid #8d9aa5;
-  border-radius: 5px;
+#quote-box {
   position: absolute;
-  margin: 5px 0 0 -19px;
+  top: 20%;
+  left: 10%;
+  right: 10%;
+  width: 80%;
+  line-height: .5;
 }
 
-#color div {
-  width: 50px;
-  height: 50px;
+.quote {
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 1.1;
+  position: relative;
+  margin: 0;
+}
+
+.quote:before, .quote:after {
+  font-size: 3rem;
+  line-height: 2.5rem;
+  position: absolute;
+}
+
+.quote:before {
+  content: "“";
+  top: .25em;
+  left: -.5em;
+}
+
+.quote:after {
+  content: "”";
+  bottom: -.1em;
+  margin-left: .1em;
+  position: absolute;
+}
+
+.tag {
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  line-height: 1.1;
+  text-align: left;
+  margin-right: 4em;
+}
+
+
+.source {
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  line-height: 1.1;
+  text-align: right;
+  margin-right: 4em;
+}
+
+.source:before {
+  content: "—";
+}
+
+.citation {
+  font-style: italic;
+}
+
+.citation:before {
+  content: ", ";
+  font-style: normal;
+}
+
+.year:before {
+  content: ", ";
+  font-style: normal;
+}
+
+#loadQuote {
+  position: fixed;
+  width: 12em;
   display: inline-block;
-  border-radius: 50%;
-  margin: 5px;
+  left: 50%;
+  margin-left: -6em;
+  bottom: 150px;
+  border-radius: 4px;
+  border: 2px solid #fff;
+  color: #fff;
+  background-color: #36b55c;
+  padding: 15px 0;
+  transition: .5s ;
+}
+#loadQuote:hover {
+  background-color: rgba(255,255,255,.25);
 }
 
-span {
-  color: red;
+#loadQuote:focus {
+  outline: none;
+}
+
+@media (min-width: 420px) {
+  .quote {
+    font-size: 4rem;
+  }
+  .quote:before, .quote:after {
+    font-size: 6rem;
+  }
+  .source {
+    font-size: 1.25rem;
+  }
 }
