@@ -7,7 +7,7 @@ var mySetInterval = setInterval(printQuote, myInterval);
 
 
 
-//getRandomRGB adapted from https://stackoverflow.com/questions/154059/how-to-check-empty-undefined-null-string-in-javascript
+//updateColors adapted from https://stackoverflow.com/questions/154059/how-to-check-empty-undefined-null-string-in-javascript
 function updateColors(){
   var r = Math.floor(Math.random()*256);          // Random between 0-255
   var g = Math.floor(Math.random()*256);          // Random between 0-255
@@ -20,9 +20,12 @@ function updateColors(){
   myButton.style.backgroundColor= rgb;
 };
 
-/*printQuote
-1) properly display the random quote in the DOM
+/*printQuote 
+  - properly display the random quote in the DOM
+  - clears and restarts the interval for the background change.
+  - changes the background color for new onclick events.
 */
+
 function printQuote() {
 
     //Step 1. Get the `getRandomQuote` function and assign it to a variable.
@@ -61,7 +64,7 @@ function printQuote() {
     mySetInterval = setInterval(printQuote, myInterval);
 };
 
-//generates a random number, then uses that randmon number to get quotes from array of quote objects defined in quotes.js
+// getRandomQuote generates a random number, then uses that randmon number to get quotes from array of quote objects defined in quotes.js
 function getRandomQuote(){
     //Step 1. get random number 
     var quoteIndex =  Math.floor((Math.random() * quotes.length) );
@@ -73,3 +76,7 @@ function getRandomQuote(){
 
 //create an event listener for the onclick event of the printQuote button;
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
+
+//adopted from https://www.tutorialspoint.com/How-do-I-call-a-JavaScript-function-on-page-load
+//changes the quote to a local quote object instead of the static bolierplate quote provided in index.html
+window.onload=printQuote();
