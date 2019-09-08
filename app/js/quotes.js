@@ -9,7 +9,7 @@ const tags = {
 };
 
 
-//array of quotes 77
+//array of quotes
 var quotes = [];
 
 //quotes adapted from https://gist.github.com/nasrulhazim/54b659e43b1035215cd0ba1d4577ee80/
