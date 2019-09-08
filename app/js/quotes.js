@@ -16,14 +16,14 @@ var quotes = [];
 quotes = [
 {
   quote: 'Strive not to be a success, but rather to be of value.',
-  author: 'Albert Einstein',
+  source: 'Albert Einstein',
   citation: '',
   year: '',
   tag:tags.BUSINESS
 },
 {
   quote: 'Two roads diverged in a wood, and I—I took the one less traveled by, And that has made all the difference.',
-  author: 'Robert Frost',
+  source: 'Robert Frost',
   citation: 'The Road Not Taken',
   year: '1916',
   tag:tags.LIFE
@@ -31,28 +31,28 @@ quotes = [
 },
 {
   quote: 'I attribute my success to this: I never gave or took any excuse.',
-  author: 'Florence Nightingale',
+  source: 'Florence Nightingale',
   citation: '',
   year: '',
   tag:tags.LIFE
 },
 {
   quote: 'You miss 100% of the shots you don\’t take.',
-  author: 'Wayne Gretzky',
+  source: 'Wayne Gretzky',
   citation: 'Hockey News',
   year: 'January 16, 1983',
   tag:tags.SPORTS
 },
 {
   quote: 'I\’ve missed more than 9000 shots in my career. I\’ve lost almost 300 games. 26 times I\’ve been trusted to take the game winning shot and missed. I\’ve failed over and over and over again in my life. And that is why I succeed.',
-  author: 'Michael Jordan',
+  source: 'Michael Jordan',
   citation: 'Nike Culture : The Sign of the Swoosh p. 49',
   year: '1998',
   tag:tags.SPORTS
 },
 {
   quote: 'The only way to do great work is to love what you do.',
-  author: 'Steve Jobs',
+  source: 'Steve Jobs',
   citation: '',
   year: '',
   tag:tags.BUSINESS
